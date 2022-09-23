@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            top: 30%;
+            left: 37%;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-width: 320px;
+            background-color: #B266FF;
+        }
+
+        button {
+            background: none;
+            color: inherit;
+            border: none;
+            cursor: pointer;
+            outline: inherit;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .container {
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 10px;
+
+        }
+        .Login-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            row-gap: 20px;
+            width: 51.2rem;
+            height: 50rem;
+            padding-left: 16px;
+            padding-top: 48px;
+            padding-bottom: 48px;
+            padding-right: 16px;
+            
+        }
+
+        .login-text {
+            border: 0px dashed black;
+            grid-column: 1/4;
+            grid-row: 2/3;
+            text-align: center;
+            font-size: 12px;
+            padding-top: 70px;
+
+        }
+
+        .login-id {
+            border: 0px dashed black;
+            grid-column: 1/4;
+            grid-row: 3/4;
+            padding: 30px;
+            text-align: center;
+
+        }
+
+        .logout-button {
+            color: white;
+            background-color: #B266FF;
+            border: 0px dashed black;
+            grid-column: 2/3;
+            grid-row: 4/5;
+            text-align: center;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 10px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Login-container">
+            <div class="login-text">
+                <h1>로그인 성공</h1>
+            </div>
+            <div class="login-id">
+                <h2>akdm@naver.com</h2>
+            </div>
+            <div class="logout-button">
+                <button>로그아웃</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

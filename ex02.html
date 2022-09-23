@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            top: 30%;
+            left: 37%;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-width: 320px;
+            background-color: #B266FF;
+        }
+
+        button {
+            background: none;
+            color: inherit;
+            border: none;
+            cursor: pointer;
+            outline: inherit;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+        .container {
+            position: absolute;
+            background-color: white;
+            border: 0px solid black;
+            border-radius: 10px;
+         
+        }
+        .Login-container {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            row-gap: 20px;
+            width: 51.2rem;
+            height: 50rem;
+        }
+
+        .login-text {
+            border: 0px dashed black;
+            grid-column: 2/9;
+            grid-row: 2/5;
+            padding: 8rem 16rem;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .id {
+            border: 0px dashed black;
+            grid-column: 2/9;
+            grid-row: 4/5;
+            margin-top: 20px;
+        }
+
+        .pw {
+            border: 0px dashed black;
+            grid-column: 2/9;
+            grid-row: 5/6;
+            margin-top: 20px;
+        }
+
+        .login-button {
+            border: 0px solid black;
+            border-radius: 10px;
+            grid-column: 2/9;
+            grid-row: 6/7;
+            width: 70%;
+            height: 55%;
+            text-align: center;
+            margin: 13px 60px ;
+            padding: 5px;
+            background-color: #B266FF;
+            color: white;
+        }
+
+        .find {
+            border: 0px dashed black;
+            grid-column: 2/9;
+            grid-row: 7/8;
+            text-align: center;
+        }
+
+        .sign {
+            border: 0px dashed black;
+            grid-column: 2/9;
+            grid-row: 7/8;
+            text-align: center;
+            margin-top: 0px;
+            padding: 30px;
+
+        }
+        input {
+            border-style:none;
+            border-bottom:solid 1px #cacaca;
+            border-collapse:collapse;
+            width: 39.5rem;
+            height: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="Login-container">
+            <div class="login-text">
+                <h1>로그인</h1>
+            </div>
+            <div class="id">
+                <input type="text" value="이메일">
+            </div>
+            <div class="pw" >
+                <input type="password" value="비밀번호">
+            </div>
+            <div class="login-button">
+                <button>로그인</button>
+            </div>
+            <div class="find">
+                <button>아이디/비밀번호 찾기</button>
+            </div>
+            <div class="sign">
+                <button>회원가입</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
