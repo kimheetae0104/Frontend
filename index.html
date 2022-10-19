@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font: inherit;
+            color: inherit;
+        }
+
+        *,
+        :after,
+        :before {
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        :root {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            cursor: default;
+            line-height: 1.5;
+            overflow-wrap: break-word;
+            -moz-tab-size: 4;
+            tab-size: 4
+        }
+
+        html,
+        body {
+            display: grid;
+            grid-template-columns: repeat(120px, 1fr, 1fr);
+            grid-template-rows: repeat(80px, 1fr, 1fr);
+            background-image: url(img/planets-g96b6c9d9b_1920.jpg);
+            background-size: cover;
+            background-color: #000000;
+            padding: 36px;
+            height: 100%;
+            width: 100%;
+            color: white;
+        }
+
+        img,
+        picture,
+        video,
+        canvas,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        button {
+            background: none;
+            border: 0;
+            cursor: pointer;
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        header {
+            grid-column: 1 / 12;
+            grid-row: 1 / 2;
+        }
+        .user_icon {
+            color: gray;
+            font-size: 30px;
+        }
+        aside {
+            grid-column-start: 10;
+            grid-column-end: 12;
+            grid-row-start: 2;
+            grid-row-end: 12;
+            position: relative;
+        }
+        .fa-bell{
+            font-size: 30px;
+            position: absolute;
+            padding-left: 18rem;
+            margin-top: 42rem;
+
+        }
+        main {
+            grid-column-start: 1;
+            grid-column-end: 10;
+            grid-row-start: 2;
+            grid-row-end: 10;
+            position: static;
+        }
+
+        .welcome {
+            font-size: 100px;
+            margin-left: 34rem;
+            margin-top: 12rem;
+            position: absolute;
+        }
+
+        .world {
+            font-size: 80px;
+            margin-left: 46rem;
+            margin-top: 23rem;
+            position: absolute;
+        }
+
+        footer {
+            grid-column-start: 1;
+            grid-column-end: 10;
+            grid-row: 11/11;
+            position: static;
+        }
+        .bottom_list{
+            position: absolute;
+            margin-top: 2rem;
+            
+        }
+        .page_number{
+            position: absolute;
+            font-size: 1.1rem;
+            margin-top: 3rem;
+        }
+        ul {
+            list-style: none;
+            margin-left: 23rem;
+        }
+
+        li {
+            float: left;
+            margin-right: 60px;
+            font-size: 30px;
+        }
+        .up_down {
+            font-size: 30px;
+            position: relative;
+            margin-top: rem;
+            margin-left: 60rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="user">
+            <div class="user_icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+        </div>
+    </header>
+    <aside>
+        <p></p>
+        <i class="fa-solid fa-bell"></i>
+    </aside>
+    <main>
+        <section class="main_contants">
+            <div class="welcome">
+                <p>WELCOME</p>
+            </div>
+            <div class="world">
+                <p>TO MY WORLD</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="page_number">1 / 4</div>
+        <div class="bottom_list">
+            <ul>
+                <li><i class="fa-brands fa-github"></i></li>
+                <li><i class="fa-solid fa-blog"></i></li>
+            </ul>
+            <div class="up_down">
+                <ul>
+                    <li><i class="fa-solid fa-angle-up"></i><li>
+                    <li><i class="fa-solid fa-angle-down"></i></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
