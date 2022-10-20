@@ -10,6 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
     <style>
+        /* 초기화 소스 */
         * {
             margin: 0;
             padding: 0;
@@ -39,11 +40,12 @@
         body {
             display: grid;
             grid-template-columns: repeat(120px, 1fr, 1fr);
-            grid-template-rows: repeat(80px, 1fr, 1fr);
+            grid-template-rows: repeat(70px, 1fr, 1fr);
             background-image: url(img/planets-g96b6c9d9b_1920.jpg);
             background-size: cover;
+            background-repeat: no-repeat;
             background-color: #000000;
-            padding: 36px;
+            padding: 12px;
             height: 100%;
             width: 100%;
             color: white;
@@ -65,7 +67,11 @@
         }
 
         a {
-            text-decoration: none
+            text-decoration: none;
+        }
+
+        li {
+            display: block;
         }
 
         table {
@@ -73,121 +79,236 @@
             border-spacing: 0
         }
 
-        header {
+        /* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+        @media all and (min-width:768px) and (max-width:1023px) {
+            /*스타일입력*/
+        }
+
+
+        /* header 영역 */
+        #main_header {
             grid-column: 1 / 12;
             grid-row: 1 / 2;
-        }
-        .user_icon {
-            color: gray;
-            font-size: 30px;
-        }
-        aside {
-            grid-column-start: 10;
-            grid-column-end: 12;
-            grid-row-start: 2;
-            grid-row-end: 12;
+            /* 중앙 정렬 */
+            margin: 0 auto;
+            width: 1740px;
+            height: 100px;
+            /* 정대 좌표 */
             position: relative;
         }
-        .fa-bell{
-            font-size: 30px;
-            position: absolute;
-            padding-left: 18rem;
-            margin-top: 42rem;
 
+        #main_header>#user {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+            font-size: 35px;
         }
-        main {
+
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        /* 메뉴 */
+        #main_gnb>ul {
+            overflow: hidden;
+        }
+
+        #main_gnb>ul>li {
+            float: left;
+        }
+
+        #main_gnb>ul>li>a {
+            display: block;
+            padding: 2px 10px;
+            border: 1px solid white;
+        }
+
+        #main_header>#main_lnb {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+
+        #main_gnb>ul>li:first-child>a {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #main_gnb>ul>li:last-child>a {
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* 메뉴(2) */
+        #main_lnb>ul {
+            overflow: hidden;
+        }
+
+        #main_lnb>ul>li {
+            float: left;
+        }
+
+        #main_lnb>ul>li>a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid white;
+        }
+
+        #main_lnb>ul>li>a :hover {
+            background: white;
+            color: white;
+        }
+
+        #main_lnb>ul>li:first-child>a {
+            border-radius: 10px 0 0 10px;
+        }
+
+        #main_lnb>ul>li:last-child>a {
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* main secion */
+        #main_section {
             grid-column-start: 1;
             grid-column-end: 10;
             grid-row-start: 2;
             grid-row-end: 10;
-            position: static;
+            position: relative;
         }
 
-        .welcome {
+        #main_section > article > h1 {
             font-size: 100px;
-            margin-left: 34rem;
+            margin-left: 36rem;
             margin-top: 12rem;
             position: absolute;
         }
 
-        .world {
-            font-size: 80px;
-            margin-left: 46rem;
-            margin-top: 23rem;
+        #main_section>article>h2 {
+            font-size: 90px;
+            margin-left: 42rem;
+            margin-top: 20rem;
             position: absolute;
         }
 
-        footer {
-            grid-column-start: 1;
-            grid-column-end: 10;
-            grid-row: 11/11;
-            position: static;
-        }
-        .bottom_list{
-            position: absolute;
-            margin-top: 2rem;
-            
-        }
-        .page_number{
-            position: absolute;
-            font-size: 1.1rem;
-            margin-top: 3rem;
-        }
-        ul {
-            list-style: none;
-            margin-left: 23rem;
-        }
-
-        li {
-            float: left;
-            margin-right: 60px;
-            font-size: 30px;
-        }
-        .up_down {
-            font-size: 30px;
+        /* aside */
+        aside {
+            grid-column-start: 10;
+            grid-column-end: 12;
+            grid-row-start: 2;
+            grid-row-end: 10;
             position: relative;
-            margin-top: rem;
-            margin-left: 60rem;
+        }
+
+        /* footer */
+
+        #main_footer {
+            grid-column: 1 / 12;
+            grid-row: 11 / 11;
+            display: flex;
+            /* 중앙 정렬 */
+            margin: 0 auto;
+            width: 1740px;
+            height: 100px;
+            /* 정대 좌표 */
+            position: relative;
+        }
+
+        #main_footer > p {
+            position: absolute;
+            left: 0px;
+            top: 100px;
+            font-size: 24px;
+        }
+
+        #main_footer>.social {
+           position: absolute;
+           left: 20em;
+           top: 100px;
+        }
+        #main_footer >.social > ul{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            font-size: 24px;
+            width: 100px;
+            justify-content: space-between;
+        }
+        #main_footer>.up_down {
+            position: absolute;
+            left: 85em;
+            top: 100px;
+         }
+         #main_footer >.up_down > ul{
+             display: flex;
+             flex-direction: row;
+             position: absolute;
+             font-size: 24px;
+             width: 100px;
+             justify-content: space-between;
+           
+         }
+        #main_footer > i{
+            position: absolute;
+            right: 0px;
+            top: 120px;
+            font-size: 26px;
         }
     </style>
 </head>
 
 <body>
-    <header>
+    <header id="main_header">
         <div id="user">
-            <div class="user_icon">
-                <i class="fa-regular fa-user"></i>
-            </div>
+            <i class="fa-regular fa-user"></i>
         </div>
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">page1</a></li>
+                <li><a href="">page2</a></li>
+                <li><a href="">endpage</a></li>
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="">A</a></li>
+                <li><a href="">B</a></li>
+                <li><a href="">C</a></li>
+                <li><a href="">D</a></li>
+            </ul>
+        </nav>
     </header>
-    <aside>
+
+    <section id="main_section">
+        <article class="main_arcticle">
+            <h1>WELCOME</h1>
+            <h2>TO MY WORLD</h2>
+        </article>
+
+
+    </section>
+
+    <aside id="main_aside">
         <p></p>
-        <i class="fa-solid fa-bell"></i>
+
     </aside>
-    <main>
-        <section class="main_contants">
-            <div class="welcome">
-                <p>WELCOME</p>
-            </div>
-            <div class="world">
-                <p>TO MY WORLD</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="page_number">1 / 4</div>
-        <div class="bottom_list">
+
+    <footer id="main_footer">
+        <p>1 / 4</p>
+        <div class="social">
             <ul>
                 <li><i class="fa-brands fa-github"></i></li>
                 <li><i class="fa-solid fa-blog"></i></li>
             </ul>
-            <div class="up_down">
-                <ul>
-                    <li><i class="fa-solid fa-angle-up"></i><li>
-                    <li><i class="fa-solid fa-angle-down"></i></li>
-                </ul>
-            </div>
         </div>
+        <div class="up_down">
+            <ul>
+                <li><i class="fa-solid fa-angle-up"></i><li>
+                <li><i class="fa-solid fa-angle-down"></i></li>
+            </ul>
+        </div>
+        <i class="fa-solid fa-bell"></i>
+
     </footer>
 </body>
 
