@@ -1,0 +1,217 @@
+ /* 초기화 소스 */
+ * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+:root {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    cursor: default;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+    -moz-tab-size: 4;
+    tab-size: 4
+}
+
+html,
+body {
+    display: grid;
+    grid-template-columns: repeat(120px, 1fr, 1fr);
+    grid-template-rows: repeat(70px, 1fr, 1fr);
+    background-image: url(img/planets-g96b6c9d9b_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    padding: 12px;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) {
+    /*스타일입력*/
+}
+
+
+/* header 영역 */
+#main_header {
+    grid-column: 1 / 12;
+    grid-row: 1 / 2;
+    /* 중앙 정렬 */
+    margin: 0 auto;
+    width: 1740px;
+    height: 100px;
+    /* 정대 좌표 */
+    position: relative;
+}
+
+#main_header>#user {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    font-size: 35px;
+}
+
+#main_header>#main_gnb {
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    top: 45px;
+}
+
+/* 메뉴 */
+#main_gnb>ul {
+    overflow: hidden;
+}
+
+#main_gnb>ul>li {
+    float: left;
+}
+
+#main_gnb>ul>li>a {
+    display: block;
+    padding: 2px 15px;
+    border: 1px solid white;
+}
+
+#main_header>#main_lnb {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+#main_gnb>ul>li:first-child>a {
+    border-radius: 10px 0 0 10px;
+}
+
+#main_gnb>ul>li:last-child>a {
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* main secion */
+#main_section {
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 10;
+    position: relative;
+}
+
+#main_section > article > h1 {
+    font-size: 100px;
+    margin-left: 36rem;
+    margin-top: 12rem;
+    position: absolute;
+}
+
+#main_section>article>h2 {
+    font-size: 90px;
+    margin-left: 42rem;
+    margin-top: 20rem;
+    position: absolute;
+}
+
+/* aside */
+aside {
+    grid-column-start: 10;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 10;
+    position: relative;
+}
+
+/* footer */
+
+#main_footer {
+    grid-column: 1 / 12;
+    grid-row: 11 / 11;
+    display: flex;
+    /* 중앙 정렬 */
+    margin: 0 auto;
+    width: 1740px;
+    height: 100px;
+    /* 정대 좌표 */
+    position: relative;
+}
+
+#main_footer > p {
+    position: absolute;
+    left: 0px;
+    top: 110px;
+    font-size: 24px;
+}
+
+#main_footer>.social {
+   position: absolute;
+   left: 20em;
+   top: 100px;
+}
+#main_footer >.social > ul{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    font-size: 24px;
+    width: 100px;
+    justify-content: space-between;
+}
+#main_footer>.up_down {
+    position: absolute;
+    left: 85em;
+    top: 100px;
+ }
+ #main_footer >.up_down > ul{
+     display: flex;
+     flex-direction: row;
+     position: absolute;
+     font-size: 24px;
+     width: 100px;
+     justify-content: space-between;
+   
+ }
+#main_footer > i{
+    position: absolute;
+    right: 0px;
+    top: 110px;
+    font-size: 26px;
+}
