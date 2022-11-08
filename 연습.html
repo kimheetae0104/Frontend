@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,34 @@
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/연습.css">
+    <script src="JS/index.js"></script>
     <title>Document</title>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
-body{
-    font-family: 'Noto Sans KR', sans-serif;
-}
+
+    body {
+        font-family: 'Noto Sans KR', sans-serif;
+    }
 </style>
+
 <body>
     <header id="main_header">
-        <div id="user">
-            <i class="fa-solid fa-shuttle-space" onmouseenter="zoomin(event)" onmouseleave="zoomOut(event)"></i>
+        <div id="header-nav" style="background-color:black ;">
+            <div id="user">
+                <i class="fa-solid fa-shuttle-space"></i>
+            </div>
+            <nav id="main_gnb">
+                <ul>
+                    <li class="btn-top"><a href="#index"><i class="fa-solid fa-house"></i></a></li>
+                    <li class="m"><a href="#section-01"><i class="fa-solid fa-user"></i></a></li>
+                    <li class="m"><a href="#section-02"><i class="fa-solid fa-folder"></i></a></li>
+                    <li class="m"><a href="#footer_section"><i class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav id="main_gnb">
-            <ul>
-                <li><a href=""><i class="fa-solid fa-house"></i></a></li>
-                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
-                <li><a href=""><i class="fa-solid fa-folder"></i></a></li>
-                <li><a href=""><i class="fa-solid fa-envelope"></i></a></li>
-            </ul>
-        </nav>
     </header>
-    <main>
+    <main id="contents">
         <!-- index -->
         <section id="index">
             <div class="welcome">
@@ -41,8 +47,8 @@ body{
             </div>
         </section>
         <!-- about_me -->
-        <section id="about_me">
-            <article id="aboutme">
+        <section id="section-01">
+            <article id="article-01">
                 <div class="title_about">
                     <i class="fa-solid fa-paperclip"></i>
                     <p style="border-bottom: 1px solid ;">ABOUT ME</p>
@@ -71,7 +77,7 @@ body{
                     </div>
                 </div>
             </article>
-            <article id="skills">
+            <article id="article-02">
                 <div class="title_skills">
                     <i class="fa-solid fa-paperclip"></i>
                     <p style="border-bottom: 1px solid;">SKILLS</p>
@@ -103,8 +109,8 @@ body{
                             alt="java"></div>
                 </div>
         </section>
-        <section id="project_content">
-            <article id="first_article">
+        <section id="section-02">
+            <article id="article-03">
                 <div class="title_about">
                     <i class="fa-solid fa-paperclip"></i>
                     <p style="border-bottom: 1px solid ;">PROJECT</p>
@@ -124,14 +130,17 @@ body{
                             <p style="font-weight: bold;">주류백과사전 <span>웹사이트입니다.</span>
                             <p>코로나로 인해 가정에서 음주를 즐기는 분위기가 더해져 고객들의 취향에 따른 술을 추천해주는 서비스가 없어 아이디어를 바탕으로 개발했습니다. </p>
                         </div>
-                        <div class="read-me-button"><i style="color: white;" class="fa-solid fa-arrow-right"></i><a href="https://github.com/2022-SMHRD-KDT-BigData-1/Alcohol">
-                        README</a>
+                        <div class="read-me-button"><i style="color: white;" class="fa-solid fa-arrow-right"></i><a
+                                href="https://github.com/2022-SMHRD-KDT-BigData-1/Alcohol">
+                                README</a>
                         </div>
                         <hr>
                         <div class="detail-container">
                             <div class="item">
-                                <div class="item-01"><i style="margin-top: -20px;" class="fa-solid fa-check"></i>주요기능</div>
-                                <div class="item-content" style="position: relative; margin-left: 94px ;">회원관리기능,술 정보검색기능,커뮤니티게시판,안주 월드컵
+                                <div class="item-01"><i style="margin-top: -20px;" class="fa-solid fa-check"></i>주요기능
+                                </div>
+                                <div class="item-content" style="position: relative; margin-left: 94px ;">회원관리기능,술
+                                    정보검색기능,커뮤니티게시판,안주 월드컵
                                 </div>
                             </div>
                             <div class="item">
@@ -141,15 +150,18 @@ body{
                             </div>
                             <div class="item">
                                 <div><i style="margin-top: -20px;" class="fa-solid fa-check"></i>Frontend</div>
-                                <div class="item-content" style="position: relative; margin-left: 81px;">HTML5/CSS, JavaScript</div>
+                                <div class="item-content" style="position: relative; margin-left: 81px;">HTML5/CSS,
+                                    JavaScript</div>
                             </div>
                             <div class="item">
-                                <div><i style="margin-top: -20px;"class="fa-solid fa-check"></i>Backend</div>
-                                <div class="item-content" style="position: relative; margin-left: 87px ;">Eclipse, Ajax</div>
+                                <div><i style="margin-top: -20px;" class="fa-solid fa-check"></i>Backend</div>
+                                <div class="item-content" style="position: relative; margin-left: 87px ;">Eclipse, Ajax
+                                </div>
                             </div>
                             <div class="item">
                                 <div><i style="margin-top: -20px;" class="fa-solid fa-check"></i>Database</div>
-                                <div style="position: relative; margin-left: 80px;" class="item-content">Oracle Developer</div>
+                                <div style="position: relative; margin-left: 80px;" class="item-content">Oracle
+                                    Developer</div>
                             </div>
                             <div class="item">
                                 <div><i style="margin-top: -20px;" class="fa-solid fa-check"></i>Deployment</div>
@@ -159,7 +171,7 @@ body{
                     </div>
                 </div>
             </article>
-            <article id="second_article">
+            <article id="article-04">
                 <div class="second_title">
                     <h1>도담도담</h1>
                 </div>
@@ -183,8 +195,10 @@ body{
                         <hr>
                         <div class="detail-container">
                             <div class="item">
-                                <div class="item-01"><i style="margin-top: -10px;" class="fa-solid fa-check"></i>주요기능</div>
-                                <div class="item-content" style="position: relative; margin-left: 90px ;">감성분석, 게시판기능, 사진첩 기능, 키예측 기능
+                                <div class="item-01"><i style="margin-top: -10px;" class="fa-solid fa-check"></i>주요기능
+                                </div>
+                                <div class="item-content" style="position: relative; margin-left: 90px ;">감성분석, 게시판기능,
+                                    사진첩 기능, 키예측 기능
                                 </div>
                             </div>
                             <div class="item">
@@ -194,21 +208,25 @@ body{
                             </div>
                             <div class="item">
                                 <div><i style="margin-top: -10px;" class="fa-solid fa-check"></i>Frontend</div>
-                                <div class="item-content" style="position: relative; margin-left: 74px;">HTML5/CSS, JavaScript</div>
+                                <div class="item-content" style="position: relative; margin-left: 74px;">HTML5/CSS,
+                                    JavaScript</div>
                             </div>
                             <div class="item">
                                 <div><i style="margin-top: -10px;" class="fa-solid fa-check"></i>Backend</div>
-                                <div class="item-content" style="position: relative; margin-left: 79px ;">Spring Framework,
+                                <div class="item-content" style="position: relative; margin-left: 79px ;">Spring
+                                    Framework,
                                     JupyterNotebook
                                 </div>
                             </div>
                             <div class="item">
                                 <div><i style="margin-top: -10px;" class="fa-solid fa-check"></i>Database</div>
-                                <div style="position: relative; margin-left: 72px;" class="item-content">MySQL Developer</div>
+                                <div style="position: relative; margin-left: 72px;" class="item-content">MySQL Developer
+                                </div>
                             </div>
                             <div class="item">
-                                <div><i style="margin-top: -10px;"class="fa-solid fa-check"></i>Deployment</div>
-                                <div class="item-content" style="position: relative; margin-left: 44px;">Flask Server, Tomcat</div>
+                                <div><i style="margin-top: -10px;" class="fa-solid fa-check"></i>Deployment</div>
+                                <div class="item-content" style="position: relative; margin-left: 44px;">Flask Server,
+                                    Tomcat</div>
                             </div>
                         </div>
                     </div>
@@ -218,19 +236,21 @@ body{
     </main>
     <footer id="footer_section">
         <!-- footer_area -->
-            <div class="main_list">
-                <ul>
-                    <li><a href=""><i style="color: white;" class="fa-brands fa-github"></i></a></li>
-                    <li><a href=""><i style="color: white;" class="fa-solid fa-blog"></i></a></li>
-                    <li><a href=""><i style="color: white;" class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href=""><i style="color: white;" class="fa-brands fa-facebook"></i></a></button></li>
-                </ul>
-            </div>
-            </div>
-            <div class="copyright">
-                <i style="font-size: 20px; margin-left: 0px;" class="fa-regular fa-copyright"></i>
-                <p>2022. Kim Hee Tae. All rights reserved</p> 
-            </div>
+        <div class="main_list">
+            <ul>
+                <li><a href=""><i style="color: white;" class="fa-brands fa-github"></i></a></li>
+                <li><a href=""><i style="color: white;" class="fa-solid fa-blog"></i></a></li>
+                <li><a href=""><i style="color: white;" class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i style="color: white;" class="fa-brands fa-facebook"></i></a></button></li>
+            </ul>
+        </div>
+        </div>
+        <div class="copyright">
+            <i style="font-size: 20px; margin-left: 0px;" class="fa-regular fa-copyright"></i>
+            <p>2022. Kim Hee Tae. All rights reserved</p>
+        </div>
     </footer>
+
 </body>
+
 </html>
